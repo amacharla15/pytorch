@@ -44,7 +44,7 @@ The target can either be a continuous price for regression or a class label for 
 
 The input feature matrix is represented as:
 
-```text
+text
 X shape = [10, 8]
 
 Meaning:
