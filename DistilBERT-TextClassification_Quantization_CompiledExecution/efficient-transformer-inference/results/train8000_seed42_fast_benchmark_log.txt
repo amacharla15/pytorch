@@ -1,0 +1,89 @@
+Using device: cpu
+Batch sizes: [1, 8]
+Model source: checkpoints/our_finetuned_distilbert_sst2_train8000_seed42
+
+RUNNING BASELINE FP32
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 1,
+  "accuracy": 0.875,
+  "avg_latency_ms": 70.92592961271293,
+  "throughput_samples_per_sec": 14.099215977294115,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 726.484375,
+  "rss_memory_after_accuracy_mb": 746.640625,
+  "rss_memory_after_benchmark_mb": 746.640625,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 128,
+  "max_length": 128,
+  "warmup_steps": 2,
+  "measured_steps": 5
+}
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 8,
+  "accuracy": 0.875,
+  "avg_latency_ms": 424.10601759911515,
+  "throughput_samples_per_sec": 18.86320794335433,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 747.390625,
+  "rss_memory_after_accuracy_mb": 753.66015625,
+  "rss_memory_after_benchmark_mb": 753.87109375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 128,
+  "max_length": 128,
+  "warmup_steps": 2,
+  "measured_steps": 5
+}
+
+RUNNING DYNAMIC QUANTIZED
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 1,
+  "accuracy": 0.84375,
+  "avg_latency_ms": 41.669768607243896,
+  "throughput_samples_per_sec": 23.99821341523263,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 801.43359375,
+  "rss_memory_after_accuracy_mb": 802.4921875,
+  "rss_memory_after_benchmark_mb": 802.4921875,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 128,
+  "max_length": 128,
+  "warmup_steps": 2,
+  "measured_steps": 5
+}
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 8,
+  "accuracy": 0.84375,
+  "avg_latency_ms": 226.25011900090612,
+  "throughput_samples_per_sec": 35.359097424244716,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 802.90234375,
+  "rss_memory_after_accuracy_mb": 802.90625,
+  "rss_memory_after_benchmark_mb": 802.90625,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 128,
+  "max_length": 128,
+  "warmup_steps": 2,
+  "measured_steps": 5
+}
+
+DONE
+Saved:
+- results/final_results.csv
+- results/final_summary.md
+- figures/latency_comparison.png
+- figures/throughput_comparison.png
+- figures/model_size_comparison.png
+- figures/accuracy_comparison.png
+- checkpoints/dynamic_quantized_state_dict.pt

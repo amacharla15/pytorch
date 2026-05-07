@@ -1,0 +1,16 @@
+{
+  "model_dir": "checkpoints/our_finetuned_distilbert_sst2_train8000_seed42",
+  "batch_size": 8,
+  "validation_examples": 872,
+  "fp32_accuracy": 0.8784403669724771,
+  "int8_accuracy": 0.8589449541284404,
+  "flipped_predictions": 31,
+  "fp32_correct_int8_wrong": 24,
+  "fp32_wrong_int8_correct": 7,
+  "both_correct": 742,
+  "both_wrong": 99,
+  "avg_fp32_margin_flipped": 0.5752112469560797,
+  "avg_fp32_margin_not_flipped": 3.2492732093398162,
+  "avg_abs_logit0_diff": 0.369374876326578,
+  "avg_abs_logit1_diff": 0.3242243932026205
+}

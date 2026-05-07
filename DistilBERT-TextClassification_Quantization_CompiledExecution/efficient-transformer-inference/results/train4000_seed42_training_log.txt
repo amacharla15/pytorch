@@ -1,0 +1,34 @@
+Using device: cpu
+Base model: distilbert-base-uncased
+Output dir: checkpoints/our_finetuned_distilbert_sst2_train4000_seed42
+Seed: 42
+Train limit: 4000
+Validation limit: 872
+
+Epoch 1 of 1
+step: 25 avg_train_loss: 0.6933661007881164
+step: 50 avg_train_loss: 0.680600311756134
+step: 75 avg_train_loss: 0.6316564655303956
+step: 100 avg_train_loss: 0.5839458803832531
+step: 125 avg_train_loss: 0.5343513298630714
+step: 150 avg_train_loss: 0.506077918757995
+step: 175 avg_train_loss: 0.47688363088028773
+step: 200 avg_train_loss: 0.46798481125384567
+step: 225 avg_train_loss: 0.4518254314859708
+step: 250 avg_train_loss: 0.44269395345449447
+step: 275 avg_train_loss: 0.42690336380492555
+step: 300 avg_train_loss: 0.4242817384128769
+step: 325 avg_train_loss: 0.4129080377519131
+step: 350 avg_train_loss: 0.4052489298688514
+step: 375 avg_train_loss: 0.4003752910196781
+step: 400 avg_train_loss: 0.3932431226875633
+step: 425 avg_train_loss: 0.3866760082805858
+step: 450 avg_train_loss: 0.3817763526240985
+step: 475 avg_train_loss: 0.3784604110058985
+step: 500 avg_train_loss: 0.37366645387560127
+epoch_train_loss: 0.37366645387560127
+validation_loss: 0.2822304229944124
+validation_accuracy: 0.875
+
+Saved our fine-tuned model to: checkpoints/our_finetuned_distilbert_sst2_train4000_seed42
+Saved training summary to: checkpoints/our_finetuned_distilbert_sst2_train4000_seed42/training_summary.json

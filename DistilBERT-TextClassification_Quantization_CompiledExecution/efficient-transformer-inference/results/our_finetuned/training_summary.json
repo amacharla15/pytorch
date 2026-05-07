@@ -1,0 +1,20 @@
+{
+  "base_model": "distilbert-base-uncased",
+  "output_dir": "checkpoints/our_finetuned_distilbert_sst2",
+  "train_limit": 4000,
+  "validation_limit": 872,
+  "epochs": 1,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "max_length": 128,
+  "device": "cpu",
+  "training_time_seconds": 477.22519302368164,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.36844350119680164,
+      "validation_loss": 0.2776624073676013,
+      "validation_accuracy": 0.8784403669724771
+    }
+  ]
+}

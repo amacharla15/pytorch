@@ -1,0 +1,16 @@
+{
+  "model_dir": "checkpoints/our_finetuned_distilbert_sst2",
+  "batch_size": 8,
+  "validation_examples": 872,
+  "fp32_accuracy": 0.8784403669724771,
+  "int8_accuracy": 0.8784403669724771,
+  "flipped_predictions": 42,
+  "fp32_correct_int8_wrong": 21,
+  "fp32_wrong_int8_correct": 21,
+  "both_correct": 745,
+  "both_wrong": 85,
+  "avg_fp32_margin_flipped": 0.5741737588486147,
+  "avg_fp32_margin_not_flipped": 3.0837703043090023,
+  "avg_abs_logit0_diff": 0.4533501810911154,
+  "avg_abs_logit1_diff": 0.47951363633790506
+}

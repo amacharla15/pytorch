@@ -1,0 +1,161 @@
+Using device: cpu
+Batch sizes: [1, 8, 16, 32]
+Model source: checkpoints/our_finetuned_distilbert_sst2_train8000_seed42
+
+RUNNING BASELINE FP32
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 1,
+  "accuracy": 0.8784403669724771,
+  "avg_latency_ms": 105.78572885133326,
+  "throughput_samples_per_sec": 9.45307094688885,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 750.72265625,
+  "rss_memory_after_accuracy_mb": 768.40625,
+  "rss_memory_after_benchmark_mb": 768.609375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 8,
+  "accuracy": 0.8784403669724771,
+  "avg_latency_ms": 423.69852925185114,
+  "throughput_samples_per_sec": 18.88134946827892,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 769.9609375,
+  "rss_memory_after_accuracy_mb": 781.5078125,
+  "rss_memory_after_benchmark_mb": 781.4765625,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 16,
+  "accuracy": 0.8784403669724771,
+  "avg_latency_ms": 786.0494207969168,
+  "throughput_samples_per_sec": 20.35495425183164,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 781.5078125,
+  "rss_memory_after_accuracy_mb": 781.5,
+  "rss_memory_after_benchmark_mb": 781.68359375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 32,
+  "accuracy": 0.8784403669724771,
+  "avg_latency_ms": 1585.5512909023673,
+  "throughput_samples_per_sec": 20.182254704474552,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 781.74609375,
+  "rss_memory_after_accuracy_mb": 781.42578125,
+  "rss_memory_after_benchmark_mb": 782.484375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RUNNING DYNAMIC QUANTIZED
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 1,
+  "accuracy": 0.8727064220183486,
+  "avg_latency_ms": 28.42658800072968,
+  "throughput_samples_per_sec": 35.1783337477692,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 829.3359375,
+  "rss_memory_after_accuracy_mb": 830.8671875,
+  "rss_memory_after_benchmark_mb": 830.8671875,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 8,
+  "accuracy": 0.8589449541284404,
+  "avg_latency_ms": 195.46673514705617,
+  "throughput_samples_per_sec": 40.927680067819885,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 830.8359375,
+  "rss_memory_after_accuracy_mb": 830.8359375,
+  "rss_memory_after_benchmark_mb": 830.8359375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 16,
+  "accuracy": 0.8589449541284404,
+  "avg_latency_ms": 387.6029938473948,
+  "throughput_samples_per_sec": 41.27935091827346,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 830.83203125,
+  "rss_memory_after_accuracy_mb": 839.0390625,
+  "rss_memory_after_benchmark_mb": 839.0390625,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 32,
+  "accuracy": 0.8589449541284404,
+  "avg_latency_ms": 886.0684962011874,
+  "throughput_samples_per_sec": 36.11458948963038,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 839.046875,
+  "rss_memory_after_accuracy_mb": 840.734375,
+  "rss_memory_after_benchmark_mb": 840.734375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+DONE
+Saved:
+- results/final_results.csv
+- results/final_summary.md
+- figures/latency_comparison.png
+- figures/throughput_comparison.png
+- figures/model_size_comparison.png
+- figures/accuracy_comparison.png
+- checkpoints/dynamic_quantized_state_dict.pt
