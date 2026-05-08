@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Hugging Face / PyTorch caches
+.cache/
+cache/
+**/cache/
+huggingface/
+transformers/
+datasets/
+
+# Large model/checkpoint artifacts
+**/checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# GPU scratch run folder internals
+**/gpu_full_sst2_seed42/cache/
+**/gpu_full_sst2_seed42/checkpoints/
+**/gpu_full_sst2_seed42/results/
+**/gpu_full_sst2_seed42/figures/
+
+# Temporary archives
+*.tar.gz
+*.zip
