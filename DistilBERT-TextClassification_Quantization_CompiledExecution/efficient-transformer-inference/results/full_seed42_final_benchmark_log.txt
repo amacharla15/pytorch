@@ -1,0 +1,191 @@
+Using device: cpu
+Batch sizes: [1, 8, 16, 32]
+Model source: /research/amacharla/distilbert_project/pytorch/DistilBERT-TextClassification_Quantization_CompiledExecution/efficient-transformer-inference/gpu_full_sst2_seed42/checkpoints/our_finetuned_distilbert_sst2_full_seed42
+
+RUNNING BASELINE FP32
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 1,
+  "accuracy": 0.9048165137614679,
+  "avg_latency_ms": 31.58843505079858,
+  "throughput_samples_per_sec": 31.657155487185783,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 1098.8203125,
+  "rss_memory_after_accuracy_mb": 1123.80859375,
+  "rss_memory_after_benchmark_mb": 1123.80859375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 8,
+  "accuracy": 0.9048165137614679,
+  "avg_latency_ms": 1021.8287496012634,
+  "throughput_samples_per_sec": 7.829100525035871,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 1125.4765625,
+  "rss_memory_after_accuracy_mb": 1132.97265625,
+  "rss_memory_after_benchmark_mb": 1132.97265625,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 16,
+  "accuracy": 0.9048165137614679,
+  "avg_latency_ms": 1023.0627713084685,
+  "throughput_samples_per_sec": 15.639314076042908,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 1132.97265625,
+  "rss_memory_after_accuracy_mb": 1144.1484375,
+  "rss_memory_after_benchmark_mb": 1144.1484375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 32,
+  "accuracy": 0.9048165137614679,
+  "avg_latency_ms": 1784.1051442956086,
+  "throughput_samples_per_sec": 17.936162620412194,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 1144.15625,
+  "rss_memory_after_accuracy_mb": 1146.91015625,
+  "rss_memory_after_benchmark_mb": 1146.91015625,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RUNNING DYNAMIC QUANTIZED
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 1,
+  "accuracy": 0.9013761467889908,
+  "avg_latency_ms": 49.35876629897393,
+  "throughput_samples_per_sec": 20.25982565979952,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 1190.72265625,
+  "rss_memory_after_accuracy_mb": 1193.671875,
+  "rss_memory_after_benchmark_mb": 1193.671875,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 8,
+  "accuracy": 0.9002293577981652,
+  "avg_latency_ms": 310.618576745037,
+  "throughput_samples_per_sec": 25.755059738640767,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 1193.30078125,
+  "rss_memory_after_accuracy_mb": 1194.88671875,
+  "rss_memory_after_benchmark_mb": 1194.88671875,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 16,
+  "accuracy": 0.9094036697247706,
+  "avg_latency_ms": 178.32745088962838,
+  "throughput_samples_per_sec": 89.72258572743704,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 1194.234375,
+  "rss_memory_after_accuracy_mb": 1195.81640625,
+  "rss_memory_after_benchmark_mb": 1195.81640625,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 32,
+  "accuracy": 0.9059633027522935,
+  "avg_latency_ms": 1130.7629005459603,
+  "throughput_samples_per_sec": 28.29947815280251,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 1195.1875,
+  "rss_memory_after_accuracy_mb": 1195.8203125,
+  "rss_memory_after_benchmark_mb": 1195.8203125,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RUNNING COMPILED FP32
+
+COMPILE ERROR
+{
+  "variant": "compiled_fp32",
+  "batch_size": 1,
+  "error": "CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpio04zfyp/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpio04zfyp/cuda_utils.cpython-312-x86_64-linux-gnu.so', '-l:libcuda.so.1', '-L/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-I/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpio04zfyp', '-I/usr/include/python3.12']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n"
+}
+
+COMPILE ERROR
+{
+  "variant": "compiled_fp32",
+  "batch_size": 8,
+  "error": "CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpo3ruiote/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpo3ruiote/cuda_utils.cpython-312-x86_64-linux-gnu.so', '-l:libcuda.so.1', '-L/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-I/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpo3ruiote', '-I/usr/include/python3.12']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n"
+}
+
+COMPILE ERROR
+{
+  "variant": "compiled_fp32",
+  "batch_size": 16,
+  "error": "CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpl78axjhi/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpl78axjhi/cuda_utils.cpython-312-x86_64-linux-gnu.so', '-l:libcuda.so.1', '-L/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-I/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpl78axjhi', '-I/usr/include/python3.12']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n"
+}
+
+COMPILE ERROR
+{
+  "variant": "compiled_fp32",
+  "batch_size": 32,
+  "error": "CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpag95hizy/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpag95hizy/cuda_utils.cpython-312-x86_64-linux-gnu.so', '-l:libcuda.so.1', '-L/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-I/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpag95hizy', '-I/usr/include/python3.12']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n"
+}
+
+DONE
+Saved:
+- results/final_results.csv
+- results/final_summary.md
+- figures/latency_comparison.png
+- figures/throughput_comparison.png
+- figures/model_size_comparison.png
+- figures/accuracy_comparison.png
+- checkpoints/dynamic_quantized_state_dict.pt

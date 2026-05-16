@@ -1,0 +1,13 @@
+{
+  "model_dir": "checkpoints/our_finetuned_distilbert_sst2_full_seed42",
+  "batch_size": 8,
+  "max_length": 128,
+  "input_ids_shape": [
+    8,
+    128
+  ],
+  "attention_mask_shape": [
+    8,
+    128
+  ]
+}

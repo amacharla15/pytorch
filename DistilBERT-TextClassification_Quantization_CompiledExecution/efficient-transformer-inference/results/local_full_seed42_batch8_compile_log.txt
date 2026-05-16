@@ -1,0 +1,73 @@
+Using device: cpu
+Batch sizes: [8]
+Model source: checkpoints/our_finetuned_distilbert_sst2_full_seed42
+
+RUNNING BASELINE FP32
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 8,
+  "accuracy": 0.9048165137614679,
+  "avg_latency_ms": 435.28384269884555,
+  "throughput_samples_per_sec": 18.378812203086667,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 754.27734375,
+  "rss_memory_after_accuracy_mb": 779.0,
+  "rss_memory_after_benchmark_mb": 779.21484375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RUNNING DYNAMIC QUANTIZED
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 8,
+  "accuracy": 0.8967889908256881,
+  "avg_latency_ms": 238.4010841993586,
+  "throughput_samples_per_sec": 33.556894369281245,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 824.98828125,
+  "rss_memory_after_accuracy_mb": 826.18359375,
+  "rss_memory_after_benchmark_mb": 826.18359375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RUNNING COMPILED FP32
+
+RESULT
+{
+  "variant": "compiled_fp32",
+  "batch_size": 8,
+  "accuracy": 0.9048165137614679,
+  "avg_latency_ms": 394.04823220065737,
+  "throughput_samples_per_sec": 20.302083212814004,
+  "model_size_mb": 255.45401668548584,
+  "rss_memory_before_mb": 1024.30859375,
+  "rss_memory_after_accuracy_mb": 1024.33984375,
+  "rss_memory_after_benchmark_mb": 1024.42578125,
+  "compile_first_call_seconds": 81.51654277099442,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+DONE
+Saved:
+- results/final_results.csv
+- results/final_summary.md
+- figures/latency_comparison.png
+- figures/throughput_comparison.png
+- figures/model_size_comparison.png
+- figures/accuracy_comparison.png
+- checkpoints/dynamic_quantized_state_dict.pt

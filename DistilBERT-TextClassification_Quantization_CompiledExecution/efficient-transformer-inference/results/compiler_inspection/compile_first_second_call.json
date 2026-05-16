@@ -1,0 +1,5 @@
+{
+  "first_compiled_call_seconds": 79.45578247701633,
+  "second_compiled_call_seconds": 0.3744461720052641,
+  "note": "First call includes compilation overhead. Later calls reuse compiled artifacts when assumptions still hold."
+}

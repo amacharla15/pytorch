@@ -1,0 +1,34 @@
+SST-2 Dataset
+    |
+    v
+Raw examples
+(sentence, label, idx)
+    |
+    v
+Select tiny subset
+4 train examples
+4 validation examples
+    |
+    v
+DistilBERT tokenizer
+    |
+    v
+Tokenized examples
+(input_ids, attention_mask, label, sentence, idx)
+    |
+    v
+Clean columns
+rename label → labels
+remove sentence, idx
+    |
+    v
+DataCollatorWithPadding
+    |
+    v
+DataLoader
+    |
+    v
+One batch
+input_ids:      [batch_size, seq_len]
+attention_mask: [batch_size, seq_len]
+labels:         [batch_size]

@@ -1,0 +1,4 @@
+{
+  "captured_graph_count": 1,
+  "note": "These are FX graphs captured by Dynamo using a custom backend. This backend captures graphs but does not apply Inductor optimization."
+}

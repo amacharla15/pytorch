@@ -1,0 +1,201 @@
+Full map: original project vs toy project
+ORIGINAL PROJECT
+large enough to produce final results
+
+TOY PROJECT
+small enough for you to understand every line
+Phase 1 — Data pipeline
+
+Original files:
+
+src/phase1_2_inspect_sst2.py
+src/phase1_3_tokenizer_inspection.py
+src/phase1_data_pipeline.py
+
+Original did:
+
+loaded SST-2
+inspected examples
+used distilbert-base-uncased tokenizer
+converted sentences into input_ids + attention_mask
+created train_loader and validation_loader
+batch_size = 8
+max_length = 128
+
+Toy will do:
+
+load only a few SST-2 examples
+tokenize them
+create one tiny DataLoader batch
+inspect input_ids, attention_mask, labels
+
+Purpose:
+
+Understand what data enters the model.
+Phase 2 — FP32 baseline
+
+Original files:
+
+src/save_baseline_model.py
+src/train_baseline.py
+src/train_baseline_seeded.py
+src/benchmark_all.py
+
+Original did:
+
+loaded DistilBERT sequence classification model
+fine-tuned it
+saved checkpoint
+used this checkpoint as FP32 baseline
+
+Toy will do:
+
+load a pretrained/fine-tuned model
+run one batch through it
+inspect logits
+inspect prediction
+inspect dtype of model weights
+
+Purpose:
+
+Understand what FP32 baseline means.
+Phase 3 — Tiny training
+
+Original file:
+
+src/train_baseline_seeded.py
+
+Original did:
+
+trained on 4000 examples
+validated on 872 examples
+epochs = 1
+batch_size = 8
+learning_rate = 2e-5
+seed = 42
+saved checkpoint
+
+Toy will do:
+
+train maybe 8 or 16 examples for a few steps only
+not for accuracy
+only to understand loss.backward() and optimizer.step()
+
+Purpose:
+
+Understand what fine-tuning did mechanically.
+Phase 4 — Dynamic quantization
+
+Original file:
+
+src/benchmark_all.py
+
+Original did:
+
+quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
+benchmark quantized model
+compare size, latency, throughput, accuracy
+
+Toy will do:
+
+take same FP32 model
+apply dynamic quantization
+inspect which Linear layers changed
+compare model size
+compare logits on a few examples
+
+Purpose:
+
+Understand what INT8 dynamic quantization changed.
+
+Your notes correctly say dynamic quantization does not retrain the model; it changes selected layers, mostly Linear layers, into lower-precision inference versions.
+
+Phase 5 — torch.compile
+
+Original file:
+
+src/benchmark_all.py
+
+Original did:
+
+compiled_model = torch.compile(model)
+measured first-call compile time
+then measured steady-state latency
+
+Toy will do:
+
+compile model
+time first call
+time repeated calls
+compare to eager FP32
+
+Purpose:
+
+Understand eager mode vs compiled execution.
+
+Your notes correctly describe this as Python/PyTorch eager execution being captured into a graph, optimized, and reused for repeated execution.
+
+Phase 6 — Benchmarking
+
+Original file:
+
+src/benchmark_all.py
+
+Original did:
+
+validation_limit = 872
+batch_sizes = 1,8,16,32
+warmup = 5
+steps = 20
+measured accuracy
+measured latency
+measured throughput
+measured model size
+
+Toy will do:
+
+use maybe 16 or 32 validation examples
+batch sizes maybe 1 and 8
+warmup maybe 1
+steps maybe 3
+
+Purpose:
+
+Understand measurement logic without waiting forever.
+Phase 7 — Prediction diagnostics
+
+Original file:
+
+src/compare_fp32_int8_predictions.py
+
+Original did:
+
+ran FP32 and INT8 on same validation set
+stored both logits
+stored both predictions
+checked where predictions flipped
+computed margins
+
+Toy will do:
+
+run FP32 and INT8 on maybe 16 examples
+compare logits and predictions row by row
+
+Purpose:
+
+Understand why accuracy alone is not enough.
+
+Your notes say this was one of the strongest parts of the project because it explains why INT8 looked slightly better without pretending it became smarter.
+
+How I will teach you from now on
+
+For each phase, I will use this format:
+
+1. What original project did
+2. What toy version will do
+3. Code you write
+4. What output means
+5. Presentation explanation
+6. Questions I will ask you
+
+This way you learn the actual project, but with tiny code.

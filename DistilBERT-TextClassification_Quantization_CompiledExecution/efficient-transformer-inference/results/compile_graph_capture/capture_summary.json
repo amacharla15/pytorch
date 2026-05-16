@@ -1,0 +1,11 @@
+{
+  "captured_graph_count": 1,
+  "logits": [
+    [
+      -3.540469169616699,
+      3.3025708198547363
+    ]
+  ],
+  "prediction": 1,
+  "note": "These are TorchDynamo FX graphs captured with a custom backend. This captures the graph region sent to the backend, not a final Inductor kernel visualization."
+}

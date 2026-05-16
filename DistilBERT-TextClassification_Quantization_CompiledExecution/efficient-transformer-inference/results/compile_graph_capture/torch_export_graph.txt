@@ -1,0 +1,275 @@
+graph():
+    %p_model_distilbert_embeddings_word_embeddings_weight : [num_users=1] = placeholder[target=p_model_distilbert_embeddings_word_embeddings_weight]
+    %p_model_distilbert_embeddings_position_embeddings_weight : [num_users=1] = placeholder[target=p_model_distilbert_embeddings_position_embeddings_weight]
+    %p_model_distilbert_embeddings_layernorm_weight : [num_users=1] = placeholder[target=p_model_distilbert_embeddings_layernorm_weight]
+    %p_model_distilbert_embeddings_layernorm_bias : [num_users=1] = placeholder[target=p_model_distilbert_embeddings_layernorm_bias]
+    %p_model_distilbert_transformer_layer_0_attention_q_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_attention_q_lin_weight]
+    %p_model_distilbert_transformer_layer_0_attention_q_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_attention_q_lin_bias]
+    %p_model_distilbert_transformer_layer_0_attention_k_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_attention_k_lin_weight]
+    %p_model_distilbert_transformer_layer_0_attention_k_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_attention_k_lin_bias]
+    %p_model_distilbert_transformer_layer_0_attention_v_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_attention_v_lin_weight]
+    %p_model_distilbert_transformer_layer_0_attention_v_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_attention_v_lin_bias]
+    %p_model_distilbert_transformer_layer_0_attention_out_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_attention_out_lin_weight]
+    %p_model_distilbert_transformer_layer_0_attention_out_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_attention_out_lin_bias]
+    %p_model_distilbert_transformer_layer_0_sa_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_sa_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_0_sa_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_sa_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_0_ffn_lin1_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_ffn_lin1_weight]
+    %p_model_distilbert_transformer_layer_0_ffn_lin1_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_ffn_lin1_bias]
+    %p_model_distilbert_transformer_layer_0_ffn_lin2_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_ffn_lin2_weight]
+    %p_model_distilbert_transformer_layer_0_ffn_lin2_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_ffn_lin2_bias]
+    %p_model_distilbert_transformer_layer_0_output_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_output_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_0_output_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_0_output_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_1_attention_q_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_attention_q_lin_weight]
+    %p_model_distilbert_transformer_layer_1_attention_q_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_attention_q_lin_bias]
+    %p_model_distilbert_transformer_layer_1_attention_k_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_attention_k_lin_weight]
+    %p_model_distilbert_transformer_layer_1_attention_k_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_attention_k_lin_bias]
+    %p_model_distilbert_transformer_layer_1_attention_v_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_attention_v_lin_weight]
+    %p_model_distilbert_transformer_layer_1_attention_v_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_attention_v_lin_bias]
+    %p_model_distilbert_transformer_layer_1_attention_out_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_attention_out_lin_weight]
+    %p_model_distilbert_transformer_layer_1_attention_out_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_attention_out_lin_bias]
+    %p_model_distilbert_transformer_layer_1_sa_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_sa_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_1_sa_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_sa_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_1_ffn_lin1_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_ffn_lin1_weight]
+    %p_model_distilbert_transformer_layer_1_ffn_lin1_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_ffn_lin1_bias]
+    %p_model_distilbert_transformer_layer_1_ffn_lin2_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_ffn_lin2_weight]
+    %p_model_distilbert_transformer_layer_1_ffn_lin2_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_ffn_lin2_bias]
+    %p_model_distilbert_transformer_layer_1_output_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_output_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_1_output_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_1_output_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_2_attention_q_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_attention_q_lin_weight]
+    %p_model_distilbert_transformer_layer_2_attention_q_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_attention_q_lin_bias]
+    %p_model_distilbert_transformer_layer_2_attention_k_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_attention_k_lin_weight]
+    %p_model_distilbert_transformer_layer_2_attention_k_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_attention_k_lin_bias]
+    %p_model_distilbert_transformer_layer_2_attention_v_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_attention_v_lin_weight]
+    %p_model_distilbert_transformer_layer_2_attention_v_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_attention_v_lin_bias]
+    %p_model_distilbert_transformer_layer_2_attention_out_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_attention_out_lin_weight]
+    %p_model_distilbert_transformer_layer_2_attention_out_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_attention_out_lin_bias]
+    %p_model_distilbert_transformer_layer_2_sa_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_sa_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_2_sa_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_sa_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_2_ffn_lin1_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_ffn_lin1_weight]
+    %p_model_distilbert_transformer_layer_2_ffn_lin1_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_ffn_lin1_bias]
+    %p_model_distilbert_transformer_layer_2_ffn_lin2_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_ffn_lin2_weight]
+    %p_model_distilbert_transformer_layer_2_ffn_lin2_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_ffn_lin2_bias]
+    %p_model_distilbert_transformer_layer_2_output_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_output_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_2_output_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_2_output_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_3_attention_q_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_attention_q_lin_weight]
+    %p_model_distilbert_transformer_layer_3_attention_q_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_attention_q_lin_bias]
+    %p_model_distilbert_transformer_layer_3_attention_k_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_attention_k_lin_weight]
+    %p_model_distilbert_transformer_layer_3_attention_k_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_attention_k_lin_bias]
+    %p_model_distilbert_transformer_layer_3_attention_v_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_attention_v_lin_weight]
+    %p_model_distilbert_transformer_layer_3_attention_v_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_attention_v_lin_bias]
+    %p_model_distilbert_transformer_layer_3_attention_out_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_attention_out_lin_weight]
+    %p_model_distilbert_transformer_layer_3_attention_out_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_attention_out_lin_bias]
+    %p_model_distilbert_transformer_layer_3_sa_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_sa_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_3_sa_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_sa_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_3_ffn_lin1_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_ffn_lin1_weight]
+    %p_model_distilbert_transformer_layer_3_ffn_lin1_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_ffn_lin1_bias]
+    %p_model_distilbert_transformer_layer_3_ffn_lin2_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_ffn_lin2_weight]
+    %p_model_distilbert_transformer_layer_3_ffn_lin2_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_ffn_lin2_bias]
+    %p_model_distilbert_transformer_layer_3_output_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_output_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_3_output_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_3_output_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_4_attention_q_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_attention_q_lin_weight]
+    %p_model_distilbert_transformer_layer_4_attention_q_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_attention_q_lin_bias]
+    %p_model_distilbert_transformer_layer_4_attention_k_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_attention_k_lin_weight]
+    %p_model_distilbert_transformer_layer_4_attention_k_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_attention_k_lin_bias]
+    %p_model_distilbert_transformer_layer_4_attention_v_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_attention_v_lin_weight]
+    %p_model_distilbert_transformer_layer_4_attention_v_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_attention_v_lin_bias]
+    %p_model_distilbert_transformer_layer_4_attention_out_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_attention_out_lin_weight]
+    %p_model_distilbert_transformer_layer_4_attention_out_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_attention_out_lin_bias]
+    %p_model_distilbert_transformer_layer_4_sa_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_sa_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_4_sa_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_sa_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_4_ffn_lin1_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_ffn_lin1_weight]
+    %p_model_distilbert_transformer_layer_4_ffn_lin1_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_ffn_lin1_bias]
+    %p_model_distilbert_transformer_layer_4_ffn_lin2_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_ffn_lin2_weight]
+    %p_model_distilbert_transformer_layer_4_ffn_lin2_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_ffn_lin2_bias]
+    %p_model_distilbert_transformer_layer_4_output_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_output_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_4_output_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_4_output_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_5_attention_q_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_attention_q_lin_weight]
+    %p_model_distilbert_transformer_layer_5_attention_q_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_attention_q_lin_bias]
+    %p_model_distilbert_transformer_layer_5_attention_k_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_attention_k_lin_weight]
+    %p_model_distilbert_transformer_layer_5_attention_k_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_attention_k_lin_bias]
+    %p_model_distilbert_transformer_layer_5_attention_v_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_attention_v_lin_weight]
+    %p_model_distilbert_transformer_layer_5_attention_v_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_attention_v_lin_bias]
+    %p_model_distilbert_transformer_layer_5_attention_out_lin_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_attention_out_lin_weight]
+    %p_model_distilbert_transformer_layer_5_attention_out_lin_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_attention_out_lin_bias]
+    %p_model_distilbert_transformer_layer_5_sa_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_sa_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_5_sa_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_sa_layer_norm_bias]
+    %p_model_distilbert_transformer_layer_5_ffn_lin1_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_ffn_lin1_weight]
+    %p_model_distilbert_transformer_layer_5_ffn_lin1_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_ffn_lin1_bias]
+    %p_model_distilbert_transformer_layer_5_ffn_lin2_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_ffn_lin2_weight]
+    %p_model_distilbert_transformer_layer_5_ffn_lin2_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_ffn_lin2_bias]
+    %p_model_distilbert_transformer_layer_5_output_layer_norm_weight : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_output_layer_norm_weight]
+    %p_model_distilbert_transformer_layer_5_output_layer_norm_bias : [num_users=1] = placeholder[target=p_model_distilbert_transformer_layer_5_output_layer_norm_bias]
+    %p_model_pre_classifier_weight : [num_users=1] = placeholder[target=p_model_pre_classifier_weight]
+    %p_model_pre_classifier_bias : [num_users=1] = placeholder[target=p_model_pre_classifier_bias]
+    %p_model_classifier_weight : [num_users=1] = placeholder[target=p_model_classifier_weight]
+    %p_model_classifier_bias : [num_users=1] = placeholder[target=p_model_classifier_bias]
+    %b_model_distilbert_embeddings_position_ids : [num_users=1] = placeholder[target=b_model_distilbert_embeddings_position_ids]
+    %input_ids : [num_users=1] = placeholder[target=input_ids]
+    %attention_mask : [num_users=2] = placeholder[target=attention_mask]
+    %embedding : [num_users=1] = call_function[target=torch.ops.aten.embedding.default](args = (%p_model_distilbert_embeddings_word_embeddings_weight, %input_ids, 0), kwargs = {})
+    %slice_1 : [num_users=1] = call_function[target=torch.ops.aten.slice.Tensor](args = (%b_model_distilbert_embeddings_position_ids, 1, 0, 128), kwargs = {})
+    %embedding_1 : [num_users=1] = call_function[target=torch.ops.aten.embedding.default](args = (%p_model_distilbert_embeddings_position_embeddings_weight, %slice_1), kwargs = {})
+    %add : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%embedding, %embedding_1), kwargs = {})
+    %layer_norm : [num_users=1] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add, [768], %p_model_distilbert_embeddings_layernorm_weight, %p_model_distilbert_embeddings_layernorm_bias, 1e-12), kwargs = {})
+    %dropout : [num_users=4] = call_function[target=torch.ops.aten.dropout.default](args = (%layer_norm, 0.1, False), kwargs = {})
+    %arange : [num_users=1] = call_function[target=torch.ops.aten.arange.default](args = (128,), kwargs = {dtype: torch.int64, device: cpu, pin_memory: False})
+    %_assert_tensor_metadata_default : [num_users=0] = call_function[target=torch.ops.aten._assert_tensor_metadata.default](args = (%attention_mask,), kwargs = {dtype: torch.int64, device: cpu, layout: torch.strided})
+    %to : [num_users=1] = call_function[target=torch.ops.aten.to.device](args = (%attention_mask, cpu, torch.bool), kwargs = {})
+    %arange_1 : [num_users=1] = call_function[target=torch.ops.aten.arange.default](args = (1,), kwargs = {device: cpu, pin_memory: False})
+    %arange_2 : [num_users=1] = call_function[target=torch.ops.aten.arange.default](args = (1,), kwargs = {device: cpu, pin_memory: False})
+    %arange_3 : [num_users=1] = call_function[target=torch.ops.aten.arange.default](args = (128,), kwargs = {device: cpu, pin_memory: False})
+    %add_1 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%arange_3, 0), kwargs = {})
+    %unsqueeze : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%arange_1, 1), kwargs = {})
+    %unsqueeze_1 : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%unsqueeze, 2), kwargs = {})
+    %unsqueeze_2 : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%unsqueeze_1, 3), kwargs = {})
+    %unsqueeze_3 : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%arange_2, 0), kwargs = {})
+    %unsqueeze_4 : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%unsqueeze_3, 2), kwargs = {})
+    %unsqueeze_5 : [num_users=0] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%unsqueeze_4, 3), kwargs = {})
+    %unsqueeze_6 : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%arange, 0), kwargs = {})
+    %unsqueeze_7 : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%unsqueeze_6, 1), kwargs = {})
+    %unsqueeze_8 : [num_users=2] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%unsqueeze_7, 3), kwargs = {})
+    %unsqueeze_9 : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%add_1, 0), kwargs = {})
+    %unsqueeze_10 : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%unsqueeze_9, 1), kwargs = {})
+    %unsqueeze_11 : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%unsqueeze_10, 2), kwargs = {})
+    %new_ones : [num_users=1] = call_function[target=torch.ops.aten.new_ones.default](args = (%unsqueeze_8, []), kwargs = {dtype: torch.bool, pin_memory: False})
+    %ge : [num_users=2] = call_function[target=torch.ops.aten.ge.Scalar](args = (%unsqueeze_8, 0), kwargs = {})
+    %_assert_tensor_metadata_default_1 : [num_users=0] = call_function[target=torch.ops.aten._assert_tensor_metadata.default](args = (%ge,), kwargs = {dtype: torch.bool, device: cpu, layout: torch.strided})
+    %to_1 : [num_users=1] = call_function[target=torch.ops.aten.to.dtype_layout](args = (%ge,), kwargs = {dtype: torch.bool, layout: torch.strided, device: cpu})
+    %and_1 : [num_users=1] = call_function[target=torch.ops.aten.__and__.Tensor](args = (%new_ones, %to_1), kwargs = {})
+    %index : [num_users=2] = call_function[target=torch.ops.aten.index.Tensor](args = (%to, [%unsqueeze_2, %unsqueeze_11]), kwargs = {})
+    %_assert_tensor_metadata_default_2 : [num_users=0] = call_function[target=torch.ops.aten._assert_tensor_metadata.default](args = (%index,), kwargs = {dtype: torch.bool, device: cpu, layout: torch.strided})
+    %to_2 : [num_users=1] = call_function[target=torch.ops.aten.to.dtype_layout](args = (%index,), kwargs = {dtype: torch.bool, layout: torch.strided, device: cpu})
+    %and_2 : [num_users=1] = call_function[target=torch.ops.aten.__and__.Tensor](args = (%and_1, %to_2), kwargs = {})
+    %expand : [num_users=6] = call_function[target=torch.ops.aten.expand.default](args = (%and_2, [1, -1, 128, 128]), kwargs = {})
+    %linear : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%dropout, %p_model_distilbert_transformer_layer_0_attention_q_lin_weight, %p_model_distilbert_transformer_layer_0_attention_q_lin_bias), kwargs = {})
+    %view : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear, [1, 128, -1, 64]), kwargs = {})
+    %transpose : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view, 1, 2), kwargs = {})
+    %linear_1 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%dropout, %p_model_distilbert_transformer_layer_0_attention_k_lin_weight, %p_model_distilbert_transformer_layer_0_attention_k_lin_bias), kwargs = {})
+    %view_1 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_1, [1, 128, -1, 64]), kwargs = {})
+    %transpose_1 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_1, 1, 2), kwargs = {})
+    %linear_2 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%dropout, %p_model_distilbert_transformer_layer_0_attention_v_lin_weight, %p_model_distilbert_transformer_layer_0_attention_v_lin_bias), kwargs = {})
+    %view_2 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_2, [1, 128, -1, 64]), kwargs = {})
+    %transpose_2 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_2, 1, 2), kwargs = {})
+    %scaled_dot_product_attention : [num_users=1] = call_function[target=torch.ops.aten.scaled_dot_product_attention.default](args = (%transpose, %transpose_1, %transpose_2, %expand), kwargs = {scale: 0.125})
+    %transpose_3 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%scaled_dot_product_attention, 1, 2), kwargs = {})
+    %reshape : [num_users=1] = call_function[target=torch.ops.aten.reshape.default](args = (%transpose_3, [1, 128, -1]), kwargs = {})
+    %linear_3 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%reshape, %p_model_distilbert_transformer_layer_0_attention_out_lin_weight, %p_model_distilbert_transformer_layer_0_attention_out_lin_bias), kwargs = {})
+    %add_2 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%linear_3, %dropout), kwargs = {})
+    %layer_norm_1 : [num_users=2] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_2, [768], %p_model_distilbert_transformer_layer_0_sa_layer_norm_weight, %p_model_distilbert_transformer_layer_0_sa_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_4 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_1, %p_model_distilbert_transformer_layer_0_ffn_lin1_weight, %p_model_distilbert_transformer_layer_0_ffn_lin1_bias), kwargs = {})
+    %gelu : [num_users=1] = call_function[target=torch.ops.aten.gelu.default](args = (%linear_4,), kwargs = {})
+    %linear_5 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%gelu, %p_model_distilbert_transformer_layer_0_ffn_lin2_weight, %p_model_distilbert_transformer_layer_0_ffn_lin2_bias), kwargs = {})
+    %dropout_1 : [num_users=1] = call_function[target=torch.ops.aten.dropout.default](args = (%linear_5, 0.1, False), kwargs = {})
+    %add_3 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%dropout_1, %layer_norm_1), kwargs = {})
+    %layer_norm_2 : [num_users=4] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_3, [768], %p_model_distilbert_transformer_layer_0_output_layer_norm_weight, %p_model_distilbert_transformer_layer_0_output_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_6 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_2, %p_model_distilbert_transformer_layer_1_attention_q_lin_weight, %p_model_distilbert_transformer_layer_1_attention_q_lin_bias), kwargs = {})
+    %view_3 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_6, [1, 128, -1, 64]), kwargs = {})
+    %transpose_4 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_3, 1, 2), kwargs = {})
+    %linear_7 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_2, %p_model_distilbert_transformer_layer_1_attention_k_lin_weight, %p_model_distilbert_transformer_layer_1_attention_k_lin_bias), kwargs = {})
+    %view_4 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_7, [1, 128, -1, 64]), kwargs = {})
+    %transpose_5 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_4, 1, 2), kwargs = {})
+    %linear_8 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_2, %p_model_distilbert_transformer_layer_1_attention_v_lin_weight, %p_model_distilbert_transformer_layer_1_attention_v_lin_bias), kwargs = {})
+    %view_5 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_8, [1, 128, -1, 64]), kwargs = {})
+    %transpose_6 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_5, 1, 2), kwargs = {})
+    %scaled_dot_product_attention_1 : [num_users=1] = call_function[target=torch.ops.aten.scaled_dot_product_attention.default](args = (%transpose_4, %transpose_5, %transpose_6, %expand), kwargs = {scale: 0.125})
+    %transpose_7 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%scaled_dot_product_attention_1, 1, 2), kwargs = {})
+    %reshape_1 : [num_users=1] = call_function[target=torch.ops.aten.reshape.default](args = (%transpose_7, [1, 128, -1]), kwargs = {})
+    %linear_9 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%reshape_1, %p_model_distilbert_transformer_layer_1_attention_out_lin_weight, %p_model_distilbert_transformer_layer_1_attention_out_lin_bias), kwargs = {})
+    %add_4 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%linear_9, %layer_norm_2), kwargs = {})
+    %layer_norm_3 : [num_users=2] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_4, [768], %p_model_distilbert_transformer_layer_1_sa_layer_norm_weight, %p_model_distilbert_transformer_layer_1_sa_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_10 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_3, %p_model_distilbert_transformer_layer_1_ffn_lin1_weight, %p_model_distilbert_transformer_layer_1_ffn_lin1_bias), kwargs = {})
+    %gelu_1 : [num_users=1] = call_function[target=torch.ops.aten.gelu.default](args = (%linear_10,), kwargs = {})
+    %linear_11 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%gelu_1, %p_model_distilbert_transformer_layer_1_ffn_lin2_weight, %p_model_distilbert_transformer_layer_1_ffn_lin2_bias), kwargs = {})
+    %dropout_2 : [num_users=1] = call_function[target=torch.ops.aten.dropout.default](args = (%linear_11, 0.1, False), kwargs = {})
+    %add_5 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%dropout_2, %layer_norm_3), kwargs = {})
+    %layer_norm_4 : [num_users=4] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_5, [768], %p_model_distilbert_transformer_layer_1_output_layer_norm_weight, %p_model_distilbert_transformer_layer_1_output_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_12 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_4, %p_model_distilbert_transformer_layer_2_attention_q_lin_weight, %p_model_distilbert_transformer_layer_2_attention_q_lin_bias), kwargs = {})
+    %view_6 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_12, [1, 128, -1, 64]), kwargs = {})
+    %transpose_8 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_6, 1, 2), kwargs = {})
+    %linear_13 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_4, %p_model_distilbert_transformer_layer_2_attention_k_lin_weight, %p_model_distilbert_transformer_layer_2_attention_k_lin_bias), kwargs = {})
+    %view_7 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_13, [1, 128, -1, 64]), kwargs = {})
+    %transpose_9 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_7, 1, 2), kwargs = {})
+    %linear_14 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_4, %p_model_distilbert_transformer_layer_2_attention_v_lin_weight, %p_model_distilbert_transformer_layer_2_attention_v_lin_bias), kwargs = {})
+    %view_8 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_14, [1, 128, -1, 64]), kwargs = {})
+    %transpose_10 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_8, 1, 2), kwargs = {})
+    %scaled_dot_product_attention_2 : [num_users=1] = call_function[target=torch.ops.aten.scaled_dot_product_attention.default](args = (%transpose_8, %transpose_9, %transpose_10, %expand), kwargs = {scale: 0.125})
+    %transpose_11 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%scaled_dot_product_attention_2, 1, 2), kwargs = {})
+    %reshape_2 : [num_users=1] = call_function[target=torch.ops.aten.reshape.default](args = (%transpose_11, [1, 128, -1]), kwargs = {})
+    %linear_15 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%reshape_2, %p_model_distilbert_transformer_layer_2_attention_out_lin_weight, %p_model_distilbert_transformer_layer_2_attention_out_lin_bias), kwargs = {})
+    %add_6 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%linear_15, %layer_norm_4), kwargs = {})
+    %layer_norm_5 : [num_users=2] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_6, [768], %p_model_distilbert_transformer_layer_2_sa_layer_norm_weight, %p_model_distilbert_transformer_layer_2_sa_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_16 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_5, %p_model_distilbert_transformer_layer_2_ffn_lin1_weight, %p_model_distilbert_transformer_layer_2_ffn_lin1_bias), kwargs = {})
+    %gelu_2 : [num_users=1] = call_function[target=torch.ops.aten.gelu.default](args = (%linear_16,), kwargs = {})
+    %linear_17 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%gelu_2, %p_model_distilbert_transformer_layer_2_ffn_lin2_weight, %p_model_distilbert_transformer_layer_2_ffn_lin2_bias), kwargs = {})
+    %dropout_3 : [num_users=1] = call_function[target=torch.ops.aten.dropout.default](args = (%linear_17, 0.1, False), kwargs = {})
+    %add_7 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%dropout_3, %layer_norm_5), kwargs = {})
+    %layer_norm_6 : [num_users=4] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_7, [768], %p_model_distilbert_transformer_layer_2_output_layer_norm_weight, %p_model_distilbert_transformer_layer_2_output_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_18 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_6, %p_model_distilbert_transformer_layer_3_attention_q_lin_weight, %p_model_distilbert_transformer_layer_3_attention_q_lin_bias), kwargs = {})
+    %view_9 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_18, [1, 128, -1, 64]), kwargs = {})
+    %transpose_12 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_9, 1, 2), kwargs = {})
+    %linear_19 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_6, %p_model_distilbert_transformer_layer_3_attention_k_lin_weight, %p_model_distilbert_transformer_layer_3_attention_k_lin_bias), kwargs = {})
+    %view_10 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_19, [1, 128, -1, 64]), kwargs = {})
+    %transpose_13 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_10, 1, 2), kwargs = {})
+    %linear_20 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_6, %p_model_distilbert_transformer_layer_3_attention_v_lin_weight, %p_model_distilbert_transformer_layer_3_attention_v_lin_bias), kwargs = {})
+    %view_11 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_20, [1, 128, -1, 64]), kwargs = {})
+    %transpose_14 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_11, 1, 2), kwargs = {})
+    %scaled_dot_product_attention_3 : [num_users=1] = call_function[target=torch.ops.aten.scaled_dot_product_attention.default](args = (%transpose_12, %transpose_13, %transpose_14, %expand), kwargs = {scale: 0.125})
+    %transpose_15 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%scaled_dot_product_attention_3, 1, 2), kwargs = {})
+    %reshape_3 : [num_users=1] = call_function[target=torch.ops.aten.reshape.default](args = (%transpose_15, [1, 128, -1]), kwargs = {})
+    %linear_21 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%reshape_3, %p_model_distilbert_transformer_layer_3_attention_out_lin_weight, %p_model_distilbert_transformer_layer_3_attention_out_lin_bias), kwargs = {})
+    %add_8 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%linear_21, %layer_norm_6), kwargs = {})
+    %layer_norm_7 : [num_users=2] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_8, [768], %p_model_distilbert_transformer_layer_3_sa_layer_norm_weight, %p_model_distilbert_transformer_layer_3_sa_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_22 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_7, %p_model_distilbert_transformer_layer_3_ffn_lin1_weight, %p_model_distilbert_transformer_layer_3_ffn_lin1_bias), kwargs = {})
+    %gelu_3 : [num_users=1] = call_function[target=torch.ops.aten.gelu.default](args = (%linear_22,), kwargs = {})
+    %linear_23 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%gelu_3, %p_model_distilbert_transformer_layer_3_ffn_lin2_weight, %p_model_distilbert_transformer_layer_3_ffn_lin2_bias), kwargs = {})
+    %dropout_4 : [num_users=1] = call_function[target=torch.ops.aten.dropout.default](args = (%linear_23, 0.1, False), kwargs = {})
+    %add_9 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%dropout_4, %layer_norm_7), kwargs = {})
+    %layer_norm_8 : [num_users=4] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_9, [768], %p_model_distilbert_transformer_layer_3_output_layer_norm_weight, %p_model_distilbert_transformer_layer_3_output_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_24 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_8, %p_model_distilbert_transformer_layer_4_attention_q_lin_weight, %p_model_distilbert_transformer_layer_4_attention_q_lin_bias), kwargs = {})
+    %view_12 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_24, [1, 128, -1, 64]), kwargs = {})
+    %transpose_16 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_12, 1, 2), kwargs = {})
+    %linear_25 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_8, %p_model_distilbert_transformer_layer_4_attention_k_lin_weight, %p_model_distilbert_transformer_layer_4_attention_k_lin_bias), kwargs = {})
+    %view_13 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_25, [1, 128, -1, 64]), kwargs = {})
+    %transpose_17 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_13, 1, 2), kwargs = {})
+    %linear_26 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_8, %p_model_distilbert_transformer_layer_4_attention_v_lin_weight, %p_model_distilbert_transformer_layer_4_attention_v_lin_bias), kwargs = {})
+    %view_14 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_26, [1, 128, -1, 64]), kwargs = {})
+    %transpose_18 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_14, 1, 2), kwargs = {})
+    %scaled_dot_product_attention_4 : [num_users=1] = call_function[target=torch.ops.aten.scaled_dot_product_attention.default](args = (%transpose_16, %transpose_17, %transpose_18, %expand), kwargs = {scale: 0.125})
+    %transpose_19 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%scaled_dot_product_attention_4, 1, 2), kwargs = {})
+    %reshape_4 : [num_users=1] = call_function[target=torch.ops.aten.reshape.default](args = (%transpose_19, [1, 128, -1]), kwargs = {})
+    %linear_27 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%reshape_4, %p_model_distilbert_transformer_layer_4_attention_out_lin_weight, %p_model_distilbert_transformer_layer_4_attention_out_lin_bias), kwargs = {})
+    %add_10 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%linear_27, %layer_norm_8), kwargs = {})
+    %layer_norm_9 : [num_users=2] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_10, [768], %p_model_distilbert_transformer_layer_4_sa_layer_norm_weight, %p_model_distilbert_transformer_layer_4_sa_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_28 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_9, %p_model_distilbert_transformer_layer_4_ffn_lin1_weight, %p_model_distilbert_transformer_layer_4_ffn_lin1_bias), kwargs = {})
+    %gelu_4 : [num_users=1] = call_function[target=torch.ops.aten.gelu.default](args = (%linear_28,), kwargs = {})
+    %linear_29 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%gelu_4, %p_model_distilbert_transformer_layer_4_ffn_lin2_weight, %p_model_distilbert_transformer_layer_4_ffn_lin2_bias), kwargs = {})
+    %dropout_5 : [num_users=1] = call_function[target=torch.ops.aten.dropout.default](args = (%linear_29, 0.1, False), kwargs = {})
+    %add_11 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%dropout_5, %layer_norm_9), kwargs = {})
+    %layer_norm_10 : [num_users=4] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_11, [768], %p_model_distilbert_transformer_layer_4_output_layer_norm_weight, %p_model_distilbert_transformer_layer_4_output_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_30 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_10, %p_model_distilbert_transformer_layer_5_attention_q_lin_weight, %p_model_distilbert_transformer_layer_5_attention_q_lin_bias), kwargs = {})
+    %view_15 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_30, [1, 128, -1, 64]), kwargs = {})
+    %transpose_20 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_15, 1, 2), kwargs = {})
+    %linear_31 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_10, %p_model_distilbert_transformer_layer_5_attention_k_lin_weight, %p_model_distilbert_transformer_layer_5_attention_k_lin_bias), kwargs = {})
+    %view_16 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_31, [1, 128, -1, 64]), kwargs = {})
+    %transpose_21 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_16, 1, 2), kwargs = {})
+    %linear_32 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_10, %p_model_distilbert_transformer_layer_5_attention_v_lin_weight, %p_model_distilbert_transformer_layer_5_attention_v_lin_bias), kwargs = {})
+    %view_17 : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%linear_32, [1, 128, -1, 64]), kwargs = {})
+    %transpose_22 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%view_17, 1, 2), kwargs = {})
+    %scaled_dot_product_attention_5 : [num_users=1] = call_function[target=torch.ops.aten.scaled_dot_product_attention.default](args = (%transpose_20, %transpose_21, %transpose_22, %expand), kwargs = {scale: 0.125})
+    %transpose_23 : [num_users=1] = call_function[target=torch.ops.aten.transpose.int](args = (%scaled_dot_product_attention_5, 1, 2), kwargs = {})
+    %reshape_5 : [num_users=1] = call_function[target=torch.ops.aten.reshape.default](args = (%transpose_23, [1, 128, -1]), kwargs = {})
+    %linear_33 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%reshape_5, %p_model_distilbert_transformer_layer_5_attention_out_lin_weight, %p_model_distilbert_transformer_layer_5_attention_out_lin_bias), kwargs = {})
+    %add_12 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%linear_33, %layer_norm_10), kwargs = {})
+    %layer_norm_11 : [num_users=2] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_12, [768], %p_model_distilbert_transformer_layer_5_sa_layer_norm_weight, %p_model_distilbert_transformer_layer_5_sa_layer_norm_bias, 1e-12), kwargs = {})
+    %linear_34 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%layer_norm_11, %p_model_distilbert_transformer_layer_5_ffn_lin1_weight, %p_model_distilbert_transformer_layer_5_ffn_lin1_bias), kwargs = {})
+    %gelu_5 : [num_users=1] = call_function[target=torch.ops.aten.gelu.default](args = (%linear_34,), kwargs = {})
+    %linear_35 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%gelu_5, %p_model_distilbert_transformer_layer_5_ffn_lin2_weight, %p_model_distilbert_transformer_layer_5_ffn_lin2_bias), kwargs = {})
+    %dropout_6 : [num_users=1] = call_function[target=torch.ops.aten.dropout.default](args = (%linear_35, 0.1, False), kwargs = {})
+    %add_13 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%dropout_6, %layer_norm_11), kwargs = {})
+    %layer_norm_12 : [num_users=1] = call_function[target=torch.ops.aten.layer_norm.default](args = (%add_13, [768], %p_model_distilbert_transformer_layer_5_output_layer_norm_weight, %p_model_distilbert_transformer_layer_5_output_layer_norm_bias, 1e-12), kwargs = {})
+    %select : [num_users=1] = call_function[target=torch.ops.aten.select.int](args = (%layer_norm_12, 1, 0), kwargs = {})
+    %linear_36 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%select, %p_model_pre_classifier_weight, %p_model_pre_classifier_bias), kwargs = {})
+    %relu : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_36,), kwargs = {})
+    %dropout_7 : [num_users=1] = call_function[target=torch.ops.aten.dropout.default](args = (%relu, 0.2, False), kwargs = {})
+    %linear_37 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%dropout_7, %p_model_classifier_weight, %p_model_classifier_bias), kwargs = {})
+    return (linear_37,)

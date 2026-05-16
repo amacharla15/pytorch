@@ -1,0 +1,16 @@
+{
+  "model_dir": "/research/amacharla/distilbert_project/pytorch/DistilBERT-TextClassification_Quantization_CompiledExecution/efficient-transformer-inference/gpu_full_sst2_seed42/checkpoints/our_finetuned_distilbert_sst2_full_seed42",
+  "batch_size": 8,
+  "validation_examples": 872,
+  "fp32_accuracy": 0.9048165137614679,
+  "int8_accuracy": 0.9002293577981652,
+  "flipped_predictions": 38,
+  "fp32_correct_int8_wrong": 21,
+  "fp32_wrong_int8_correct": 17,
+  "both_correct": 768,
+  "both_wrong": 66,
+  "avg_fp32_margin_flipped": 0.9362276306522912,
+  "avg_fp32_margin_not_flipped": 4.2592849605035585,
+  "avg_abs_logit0_diff": 0.7534178185411259,
+  "avg_abs_logit1_diff": 0.6916400548147433
+}

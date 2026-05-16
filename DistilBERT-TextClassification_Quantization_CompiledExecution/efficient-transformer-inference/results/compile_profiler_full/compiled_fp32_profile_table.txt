@@ -1,0 +1,23 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg       CPU Mem  Self CPU Mem    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                            aten::addmm        86.92%        3.299s        91.49%        3.473s       9.139ms           0 B           0 B           380  
+## Call CompiledFxGraph fsinxwudt33tndwwcy27eo5dbbdc...         4.54%     172.175ms        99.84%        3.790s     378.975ms         640 B    -182.81 MB            10  
+                                            aten::copy_         4.43%     168.072ms         4.43%     168.072ms     442.295us           0 B           0 B           380  
+      aten::_scaled_dot_product_flash_attention_for_cpu         3.70%     140.390ms         3.82%     144.876ms       2.415ms     182.81 MB     -11.37 MB            60  
+                                           aten::expand         0.09%       3.229ms         0.12%       4.652ms      10.574us           0 B           0 B           440  
+                               TorchDynamo Cache Lookup         0.06%       2.445ms         0.06%       2.445ms     244.453us           0 B           0 B            10  
+                                       aten::as_strided         0.05%       1.993ms         0.05%       1.993ms       2.492us           0 B           0 B           800  
+                                  compiled_fp32_forward         0.04%       1.553ms       100.00%        3.796s     379.577ms         640 B           0 B            10  
+                                        aten::transpose         0.04%       1.435ms         0.05%       2.004ms       5.567us           0 B           0 B           360  
+                             Torch-Compiled Region: 0/0         0.04%       1.422ms        99.89%        3.792s     379.177ms         640 B           0 B            10  
+                                    aten::empty_strided         0.02%     898.353us         0.02%     898.353us      14.973us     180.00 MB     180.00 MB            60  
+                                     aten::resolve_conj         0.02%     848.529us         0.02%     848.529us       1.116us           0 B           0 B           760  
+                                       aten::empty_like         0.02%     619.880us         0.04%       1.518ms      25.304us     180.00 MB           0 B            60  
+                                      Pregraph bytecode         0.01%     507.469us         0.01%     507.469us      50.747us           0 B           0 B            10  
+                                            aten::empty         0.01%     445.739us         0.01%     445.739us       2.476us      14.18 MB      14.18 MB           180  
+                                             aten::view         0.01%     210.174us         0.01%     210.174us       3.503us           0 B           0 B            60  
+                 AOTDispatcher Runtime Wrapper Prologue         0.00%      99.405us         0.00%      99.405us       9.941us           0 B           0 B            10  
+                                               [memory]         0.00%       0.000us         0.00%       0.000us       0.000us        -576 B        -576 B             9  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 3.796s

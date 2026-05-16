@@ -1,0 +1,83 @@
+START batch-8 compile benchmark: Fri May  8 09:53:23 AM UTC 2026
+Using device: cpu
+Batch sizes: [8]
+Model source: /research/amacharla/distilbert_project/pytorch/DistilBERT-TextClassification_Quantization_CompiledExecution/efficient-transformer-inference/gpu_full_sst2_seed42/checkpoints/our_finetuned_distilbert_sst2_full_seed42
+
+RUNNING BASELINE FP32
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 5043.97it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+RESULT
+{
+  "variant": "baseline_fp32",
+  "batch_size": 8,
+  "accuracy": 0.9048165137614679,
+  "avg_latency_ms": 1142.612761555938,
+  "throughput_samples_per_sec": 7.001497155612111,
+  "model_size_mb": 255.45206356048584,
+  "rss_memory_before_mb": 1098.8046875,
+  "rss_memory_after_accuracy_mb": 1126.6875,
+  "rss_memory_after_benchmark_mb": 1126.6875,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RUNNING DYNAMIC QUANTIZED
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 2697.12it/s]
+/research/amacharla/distilbert_project/pytorch/DistilBERT-TextClassification_Quantization_CompiledExecution/efficient-transformer-inference/src/benchmark_all.py:276: DeprecationWarning: torch.ao.quantization is deprecated and will be removed in 2.10. 
+For migrations of users: 
+1. Eager mode quantization (torch.ao.quantization.quantize, torch.ao.quantization.quantize_dynamic), please migrate to use torchao eager mode quantize_ API instead 
+2. FX graph mode quantization (torch.ao.quantization.quantize_fx.prepare_fx,torch.ao.quantization.quantize_fx.convert_fx, please migrate to use torchao pt2e quantization API instead (prepare_pt2e, convert_pt2e) 
+3. pt2e quantization has been migrated to torchao (https://github.com/pytorch/ao/tree/main/torchao/quantization/pt2e) 
+see https://github.com/pytorch/ao/issues/2259 for more details
+  qmodel = quantize_dynamic(
+
+RESULT
+{
+  "variant": "dynamic_quantized_int8",
+  "batch_size": 8,
+  "accuracy": 0.9002293577981652,
+  "avg_latency_ms": 467.5592831335962,
+  "throughput_samples_per_sec": 17.110129749502057,
+  "model_size_mb": 132.28924465179443,
+  "rss_memory_before_mb": 1172.046875,
+  "rss_memory_after_accuracy_mb": 1175.83984375,
+  "rss_memory_after_benchmark_mb": 1175.83984375,
+  "compile_first_call_seconds": 0.0,
+  "validation_examples": 872,
+  "max_length": 128,
+  "warmup_steps": 5,
+  "measured_steps": 20
+}
+
+RUNNING COMPILED FP32
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 4469.71it/s]
+/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/torch/_inductor/cpp_builder.py:1200: UserWarning: Can't find Python.h in /usr/include/python3.12
+  warnings.warn(f"Can't find Python.h in {str(include_dir)}")
+/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/torch/_inductor/cpp_builder.py:1200: UserWarning: Can't find Python.h in /usr/include/python3.12
+  warnings.warn(f"Can't find Python.h in {str(include_dir)}")
+/tmp/tmp89a5ace8/cuda_utils.c:7:10: fatal error: Python.h: No such file or directory
+    7 | #include <Python.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+
+COMPILE ERROR
+{
+  "variant": "compiled_fp32",
+  "batch_size": 8,
+  "error": "CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmp89a5ace8/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmp89a5ace8/cuda_utils.cpython-312-x86_64-linux-gnu.so', '-l:libcuda.so.1', '-L/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-I/research/amacharla/venvs/distilbert/lib/python3.12/site-packages/triton/backends/nvidia/include', '-I/tmp/tmp89a5ace8', '-I/usr/include/python3.12']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n"
+}
+
+DONE
+Saved:
+- results/final_results.csv
+- results/final_summary.md
+- figures/latency_comparison.png
+- figures/throughput_comparison.png
+- figures/model_size_comparison.png
+- figures/accuracy_comparison.png
+- checkpoints/dynamic_quantized_state_dict.pt
+END batch-8 compile benchmark: Fri May  8 09:57:37 AM UTC 2026
